@@ -1,0 +1,13 @@
+
+
+
+.header{
+    --black: #165c7765;
+    --background: var(--black);
+    background-image: radial-gradient( circle at 50% 50%, var(--background) 20%, transparent 20.5%, transparent 49.5%, var(--background) 50% );
+    background-size: 15px 15px;
+    backdrop-filter: blur(10px) brightness(30%);
+    -webkit-backdrop-filter: blur(20px) brightness(30%);
+    -moz-backdrop-filter: blur(20px) brightness(30%);
+   
+}
