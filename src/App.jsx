@@ -4,7 +4,7 @@ import { Header } from "./components";
 import BgEffect from "./components/BgEffect";
 import { motion, useScroll } from "framer-motion";
 
-import "./app.css";
+import "./App.css";
 import { useSelector } from "react-redux";
 function App() {
   const { scrollYProgress } = useScroll();
