@@ -5,7 +5,7 @@ import BgEffect from "../BgEffect";
 function Navitem({ name, path }) {
   return (
     <NavLink to={path}>
-      <div className="border rounded-lg p-3 hover:bg-orange-600">
+      <div className="border  rounded-lg md:p-2 lg:p-3 hover:bg-orange-600">
         <h1 className="text-white font-tektur">{name}</h1>
       </div>
     </NavLink>

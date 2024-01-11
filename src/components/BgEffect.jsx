@@ -6,11 +6,12 @@ import { mousePointer } from "../mousePointer";
 import { useSelector } from "react-redux";
 function BgEffect() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
+  const theme = useSelector((state) => state.theme);
   const x = useSelector((state) => state.x);
   const y = useSelector((state) => state.y);
   //   const { x, y } = mousePointer();
   useEffect(() => {
-    console.log("useEffect triggered with x:", x, "and y:", y);
+    // console.log("useEffect triggered with x:", x, "and y:", y);
     setPos({ x, y });
   }, [x, y]);
 
@@ -28,9 +29,9 @@ function BgEffect() {
       setInit(true);
     });
   }, [init]);
-  console.log("inside bg", pos);
+  // console.log("inside bg", pos);
   useEffect(() => {
-    if (pos.x > 900) {
+    if (theme === "light") {
       options.themes[1].options.background.color = "orange";
       options.themes[1].options.particles.color.value = "#000000";
       options.themes[1].options.particles.links.color = "#ffffff";

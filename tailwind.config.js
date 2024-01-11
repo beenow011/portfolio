@@ -8,7 +8,9 @@ export default {
     fontFamily: {
       bungee: ["Bungee Spice", "sans-serif"],
       tektur: ['Tektur', 'sans-serif'],
-      dm: ['DM Sans', 'sans-serif']
+      dm: ['DM Sans', 'sans-serif'],
+      nab: ['Nabla', 'sans-serif'],
+      foldit: ['Foldit', 'sans-serif']
     },
     extend: {
       backgroundImage: {
