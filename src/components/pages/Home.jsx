@@ -13,13 +13,13 @@ function Home() {
   console.log(theme);
   return (
     <div className="  bg-no-repeat bg-contain">
-      <div className="flex md:flex-col-reverse lg:flex-row ">
-        <div className="flex-1 pt-52 ">
+      <div className="flex flex-col md:flex-col-reverse lg:flex-row ">
+        <div className="flex-1 md:pt-52 ">
           <h1
-            className={` font-bold text-center  text-white ${
+            className={` font-bold text-center text-5xl md:text-9xl  text-white ${
               theme === "dark"
-                ? "font-nab  lg:pl-96 text-9xl"
-                : "font-dm text-tektur-400 font-semibold text-9xl lg:pl-96 "
+                ? "font-nab  lg:pl-96 "
+                : "font-dm text-tektur-400 font-semibold  lg:pl-96 "
             }  `}
           >
             Abhinav N B
@@ -32,31 +32,20 @@ function Home() {
             Web Developer | Video Editor
           </p>
         </div>
-        <div className="flex-1   bg-no-repeat bg-contain  mt-24 flex justify-center items-center ">
+        <div className="flex-1   bg-no-repeat bg-contain mt-12 md:mt-24 flex justify-center items-center ">
           <div className=" my-auto">
             <img
               src={hero4}
               alt=""
               srcset=""
-              width={600}
-              className="z-[-1] mx-auto mask1 hover:grayscale-0 grayscale"
+              className="z-[-1] w-[450px] md:w-[600px]  mx-auto mask1 hover:grayscale-0 md:grayscale"
             />
           </div>
         </div>
       </div>
       <div>
-        {/* <motion.div
-          className="box w-96 h-96 mx-auto my-96 bg-white"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            ease: "linear",
-            duration: 2,
-            x: { duration: 1 },
-          }}
-        /> */}
         <motion.div
-          className={`w-64 h-64 mx-auto my-96 relative flex justify-center items-center ${
+          className={`w-40 h-40 md:w-64 md:h-64 mx-auto my-96 relative flex justify-center items-center ${
             theme === "dark" ? " bg-cyan-500" : "bg-slate-800"
           } `}
           animate={{
@@ -80,7 +69,7 @@ function Home() {
         <h1 className="text-white font-bold text-3xl">
           Explore other sections
         </h1>
-        <div className="flex gap-6 mt-5 mb-10 bg-neutral-600 p-5 rounded-md">
+        <div className="flex gap-2 md:gap-6 mt-5 mb-10 bg-neutral-600 p-5 rounded-md">
           <div className="">
             <Navitem name="About" path="/about" />
           </div>

@@ -45,7 +45,11 @@ function MouseEffect() {
   }, [mouse.x]);
   // console.log(mouse);
   return (
-    <div className={`fixed left-10 top-10 ${mouse.y > 100 && "top-50"}`}>
+    <div
+      className={`fixed hidden md:block left-10 top-10 ${
+        mouse.y > 100 && "top-50"
+      }`}
+    >
       {" "}
       <motion.div
         className={`relative z-100 md:w-36 md:h-36 lg:w-48 lg:h-48 shadow-lg shadow-black rounded-full flex justify-center items-center ${

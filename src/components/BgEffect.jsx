@@ -9,6 +9,12 @@ function BgEffect() {
   const theme = useSelector((state) => state.theme);
   const x = useSelector((state) => state.x);
   const y = useSelector((state) => state.y);
+
+  const themeBool = useMemo(() => {
+    return theme === "light";
+  }, [theme]);
+  console.log("theme", themeBool);
+  console.log("in", theme);
   //   const { x, y } = mousePointer();
   useEffect(() => {
     // console.log("useEffect triggered with x:", x, "and y:", y);
@@ -30,17 +36,20 @@ function BgEffect() {
     });
   }, [init]);
   // console.log("inside bg", pos);
+
   useEffect(() => {
-    if (theme === "light") {
-      options.themes[1].options.background.color = "orange";
-      options.themes[1].options.particles.color.value = "#000000";
-      options.themes[1].options.particles.links.color = "#ffffff";
+    const updatedOpt = { ...options };
+    if (themeBool) {
+      updatedOpt.themes[1].options.background.color = "orange";
+      updatedOpt.themes[1].options.particles.color.value = "#000000";
+      updatedOpt.themes[1].options.particles.links.color = "#ffffff";
     } else {
-      options.themes[1].options.background.color = "#000000";
-      options.themes[1].options.particles.color.value = "#ffffff";
-      options.themes[1].options.particles.links.color = "#FFA500";
+      updatedOpt.themes[1].options.background.color = "#000000";
+      updatedOpt.themes[1].options.particles.color.value = "#ffffff";
+      updatedOpt.themes[1].options.particles.links.color = "#FFA500";
     }
-  }, [pos.x]);
+    setOpt(updatedOpt);
+  }, [themeBool]);
 
   const particlesLoaded = useCallback(
       (container) => {
@@ -119,14 +128,15 @@ function BgEffect() {
     darkTheme = () => {
       containerRef.current?.loadTheme("dark");
     };
-
+  const [opt, setOpt] = useState(options);
+  console.log("opt", opt);
   return (
     <div className="App">
       {init && (
         <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}
-          options={options}
+          options={opt}
         />
       )}
     </div>

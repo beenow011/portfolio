@@ -4,6 +4,9 @@ import MouseEffect from "./MouseEffect";
 import "./style.css";
 import Navitem from "./Navitem";
 import { useSelector } from "react-redux";
+import LargeMenuBar from "./LargeMenuBar";
+import MediumMenuBar from "./MediumMenuBar";
+import MobileThemeChanger from "./MobileThemeChanger";
 function Header() {
   const navItems = [
     {
@@ -31,7 +34,7 @@ function Header() {
   return (
     <div className="flex justify-between">
       <div
-        className={`text-black font-tektur md:w-36 lg:text-3xl  lg:w-72 lg:p-4 md:p-2 h-fit lg:h-24 m-10 bg-white rounded-md ${
+        className={`hidden md:block  text-black font-tektur md:w-36 lg:text-3xl  lg:w-72 lg:p-4 md:p-2 h-fit lg:h-24 m-10 bg-white rounded-md ${
           theme === "dark" && "opacity-0"
         }`}
       >
@@ -39,17 +42,11 @@ function Header() {
         Bring Sun here for Dark mode
       </div>
       <MouseEffect />
-      <div className="z-100 rounded-full border border-white w-[50vw] m-10   left-0 right-0 mx-auto  header">
-        <ul className="md:flex  lg:p-10 md:p-5 justify-evenly items-center">
-          {navItems.map((item) => (
-            <li key={item.name} className="my-auto">
-              <Navitem {...item} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <MobileThemeChanger />
+      <LargeMenuBar navItems={[...navItems]} />
+      <MediumMenuBar navItems={[...navItems]} />
       <div
-        className={`text-black font-tektur md:w-36 lg:text-3xl  lg:w-72 lg:p-4 h-fit md:p-2 lg:h-24 m-10 bg-white rounded-md ${
+        className={`text-black hidden md:block font-tektur md:w-36 lg:text-3xl  lg:w-72 lg:p-4 h-fit md:p-2 lg:h-24 m-10 bg-white rounded-md ${
           theme === "light" && "opacity-0"
         }`}
       >

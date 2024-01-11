@@ -10,7 +10,7 @@ function App() {
   const { scrollYProgress } = useScroll();
   const theme = useSelector((state) => state.theme);
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-screen">
       <motion.div
         className={`progress-bar ${
           theme === "dark"
