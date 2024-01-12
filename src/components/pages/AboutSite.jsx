@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
+import "./style.css";
+
 import { DiReact } from "react-icons/di";
 import RouterLogo from "../../assets/logos/router.png";
 import ReactLogo from "../../assets/logos/react.png";
@@ -8,6 +10,7 @@ import TailwindLogo from "../../assets/logos/tailwind.png";
 import framerLogo from "../../assets/logos/framer-logo.svg";
 // import { useHistory } from "react-router-dom";
 function AboutSite() {
+  const { scrollYProgress } = useScroll();
   //   const history = useHistory();
   const [menu, setMenu] = useState(false);
   const theme = useSelector((state) => state.theme);
@@ -54,6 +57,14 @@ function AboutSite() {
   //   }, [history]);
   return (
     <motion.div className="flex flex-col justify-center items-center">
+      <motion.div
+        className={`progress-bar ${
+          theme === "dark"
+            ? "bg-gradient-to-r from-red-800 via-yellow-600 to-yellow-500"
+            : "bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600"
+        }`}
+        style={{ scaleX: scrollYProgress }}
+      />
       <h1
         className={`${
           theme === "dark" ? "text-orange-400" : ""

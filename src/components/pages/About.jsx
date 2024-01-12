@@ -1,7 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import hero from "../../assets/abhiAbout.jpg";
+import "./style.css";
 function About() {
+  const { scrollYProgress } = useScroll();
   return (
     <div>
       <motion.div

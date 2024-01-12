@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "../../store/dragSlice";
 function MobileThemeChanger() {
   const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme);
   const [isOn, setIsOn] = useState(false);
   const toggleSwitch = () => setIsOn((prev) => !prev);
   useEffect(() => {
@@ -23,11 +24,18 @@ function MobileThemeChanger() {
   console.log(isOn);
   return (
     <div
-      className={`switch md:hidden  bg-white  w-36 h-[60px] m-10 rounded-md flex ${
+      className={`switch relative md:hidden  bg-white  w-36 h-[60px] m-10 rounded-md flex ${
         isOn ? "justify-end" : "justify-start"
       } p-3`}
       onClick={toggleSwitch}
     >
+      <p
+        className={`absolute top-[15px] font-tektur cursor-pointer  text-2xl my-auto font-bold text-black ${
+          theme === "dark" ? "right-3" : "left-3"
+        }`}
+      >
+        {theme === "dark" ? "Dark" : "Light"}
+      </p>
       <motion.div
         className={`handle h-10 w-10  rounded-full ${
           isOn ? "bg-sun bg-cover" : "bg-moon bg-cover"

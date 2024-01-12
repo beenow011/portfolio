@@ -4,17 +4,27 @@ import hero2 from "../../assets/abhi2.png";
 import hero3 from "../../assets/abhi3.png";
 import hero4 from "../../assets/abhi5.png";
 import { useSelector } from "react-redux";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import Navitem from "../header/Navitem";
 import { useNavigate } from "react-router-dom";
+import "./style.css";
 
 function Home() {
+  const { scrollYProgress } = useScroll();
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
   const theme = useSelector((state) => state.theme);
   console.log(theme);
   return (
     <div className="  bg-no-repeat bg-contain">
+      <motion.div
+        className={`progress-bar ${
+          theme === "dark"
+            ? "bg-gradient-to-r from-red-800 via-yellow-600 to-yellow-500"
+            : "bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600"
+        }`}
+        style={{ scaleX: scrollYProgress }}
+      />
       <div className="flex flex-col md:flex-col-reverse lg:flex-row ">
         <div className="flex-1 md:pt-52 ">
           <h1
