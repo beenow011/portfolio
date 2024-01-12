@@ -6,8 +6,10 @@ import hero4 from "../../assets/abhi5.png";
 import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import Navitem from "../header/Navitem";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
   const theme = useSelector((state) => state.theme);
   console.log(theme);
@@ -59,6 +61,9 @@ function Home() {
             times: [0, 0.2, 0.5, 0.8, 1],
             repeat: Infinity,
             repeatDelay: 1,
+          }}
+          onClick={() => {
+            navigate("/aboutsite");
           }}
         >
           {" "}

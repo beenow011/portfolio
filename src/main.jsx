@@ -5,6 +5,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
   About,
+  AboutSite,
   CreativeFrame,
   Home,
   Projects,
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/creativeframe",
         element: <CreativeFrame />,
+      },
+      {
+        path: "/aboutsite",
+        element: <AboutSite />,
       },
     ],
   },
