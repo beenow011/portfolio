@@ -8,6 +8,7 @@ import { AnimatePresence, motion, useScroll } from "framer-motion";
 import Navitem from "../header/Navitem";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
+import Explore from "../Explore";
 
 function Home() {
   const { scrollYProgress } = useScroll();
@@ -80,25 +81,7 @@ function Home() {
           <div className="font-bungee cursor-pointer text-2xl">Click here</div>
         </motion.div>
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-white font-bold text-3xl">
-          Explore other sections
-        </h1>
-        <div className="flex gap-2 md:gap-6 mt-5 mb-10 bg-neutral-600 p-5 rounded-md">
-          <div className="">
-            <Navitem name="About" path="/about" />
-          </div>
-          <div className="">
-            <Navitem name="Skills" path="/skills" />
-          </div>
-          <div className="">
-            <Navitem name="Projects" path="/projects" />
-          </div>
-          <div className="">
-            <Navitem name="Creative Frame" path="/creativeframe" />
-          </div>
-        </div>
-      </div>
+      <Explore />
     </div>
   );
 }
