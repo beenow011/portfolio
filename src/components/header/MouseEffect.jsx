@@ -46,7 +46,7 @@ function MouseEffect() {
   // console.log(mouse);
   return (
     <div
-      className={`fixed hidden md:block left-10 top-10 ${
+      className={`fixed z-10 hidden md:block left-10 top-10 ${
         mouse.y > 100 && "top-50"
       }`}
     >

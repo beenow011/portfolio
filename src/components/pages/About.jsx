@@ -11,7 +11,7 @@ function About() {
   return (
     <div className="w-screen h-fit">
       <motion.div
-        className={`progress-bar ${
+        className={`progress-bar z-20 ${
           theme === "dark"
             ? "bg-gradient-to-r from-red-800 via-yellow-600 to-yellow-500"
             : "bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600"
@@ -19,7 +19,7 @@ function About() {
         style={{ scaleX: scrollYProgress }}
       />
       <motion.div
-        className="   "
+        className=" z-[-1]  "
         animate={{ y: 50 }}
         transition={{ ease: "easeOut", duration: 0.3 }}
       >
@@ -27,7 +27,7 @@ function About() {
         <motion.div
           animate={{ y: 50 }}
           initial={false}
-          className="flex flex-col justify-center items-center max-w-screen ml-0 "
+          className="flex flex-col  justify-center items-center max-w-screen ml-0 "
         >
           <motion.div>
             <img
@@ -35,7 +35,7 @@ function About() {
               width={300}
               alt=""
               srcset=""
-              className="rounded-full ring hover:ring-white "
+              className="rounded-full  ring hover:ring-white "
             />
           </motion.div>
           <motion.div

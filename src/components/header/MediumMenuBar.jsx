@@ -52,7 +52,7 @@ function MediumMenuBar({ navItems }) {
         ></motion.div>
       </motion.button>
       <motion.ul
-        className="flex flex-col fixed top-36 md:static md:flex-row header p-3 gap-3"
+        className="flex z-20 flex-col fixed top-36 md:static md:flex-row header p-3 gap-3"
         variants={{
           open: {
             clipPath: "inset(0% 0% 0% 0% round 10px)",

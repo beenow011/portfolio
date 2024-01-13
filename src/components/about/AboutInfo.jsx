@@ -11,7 +11,7 @@ function AboutInfo() {
       className={`
         ${
           theme === "dark" ? "bg-orange-400 text-black" : "bg-black text-white"
-        } mt-36 mb-36 p-4 mx-5  md:w-[50vw]`}
+        } mt-36 mb-36 p-4 mx-5 w-[80vw]  md:w-[50vw]`}
     >
       {" "}
       <nav>
