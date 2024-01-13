@@ -10,7 +10,8 @@ export default {
       tektur: ['Tektur', 'sans-serif'],
       dm: ['DM Sans', 'sans-serif'],
       nab: ['Nabla', 'sans-serif'],
-      foldit: ['Foldit', 'sans-serif']
+      foldit: ['Foldit', 'sans-serif'],
+      manrope: ['Manrope', 'sans-serif']
     },
     extend: {
       backgroundImage: {

@@ -1,0 +1,17 @@
+import appwrite from "./logos/appwrite.png"
+import firebase from "./logos/firebase.png"
+import react from "./logos/react2.png"
+import c from "./logos/c.png"
+import cpp from "./logos/cpp.png"
+import css from "./logos/css.png"
+import tailwind from "./logos/css2.png"
+import html from "./logos/html.png"
+import js from "./logos/js.png"
+import python from "./logos/python.png"
+import redux from "./logos/redux.png"
+import router from "./logos/router.png"
+import ts from "./logos/ts.png"
+import firestore from "./logos/Firestore.png"
+import mySql from "./logos/mysql.png"
+
+export { appwrite, firebase, react, c, cpp, css, tailwind, html, js, python, redux, router, ts, firestore, mySql };

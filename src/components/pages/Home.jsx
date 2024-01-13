@@ -46,12 +46,12 @@ function Home() {
           </p>
         </div>
         <div className="flex-1   bg-no-repeat bg-contain mt-12 md:mt-24 flex justify-center items-center ">
-          <div className=" my-auto">
+          <div className=" my-auto relative">
             <img
               src={hero4}
               alt=""
               srcset=""
-              className="z-[-1] w-[450px] md:w-[600px]  mx-auto mask1 hover:grayscale-0 md:grayscale"
+              className="z-[-1] w-[450px] md:w-[600px]  mx-auto mask1 hover:grayscale-0 md:grayscale  shadow-orange-500"
             />
           </div>
         </div>

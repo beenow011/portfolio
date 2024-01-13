@@ -10,8 +10,10 @@ function AboutInfo() {
     <div
       className={`
         ${
-          theme === "dark" ? "bg-orange-400 text-black" : "bg-black text-white"
-        } mt-36 mb-36 p-4 mx-5 w-[80vw]  md:w-[50vw]`}
+          theme === "dark"
+            ? "bg-orange-400 text-black shadow-orange-400"
+            : "bg-black text-white shadow-black"
+        } mt-36 mb-36 p-4 mx-5 w-[80vw]  md:w-[50vw] shadow-lg `}
     >
       {" "}
       <nav>
