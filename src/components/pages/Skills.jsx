@@ -138,16 +138,16 @@ function Skills() {
 
       {section.map((sec) => (
         <motion.div
-          className="flex flex-col justify-center items-center mt-9 border border-white w-fit p-3 rounded-lg bg-black"
+          className={`flex flex-col justify-center items-center mt-9 md:border border-white w-fit p-3 md:bg-black rounded-lg `}
           animate={{ y: 50 }}
           transition={{ ease: "easeOut", duration: 1 }}
         >
-          <h1 className="text-white text-2xl font-semibold font-bungee mb-3">
+          <h1 className="text-white text-2xl text-wrap font-semibold font-bungee mb-3 bg-black p-3 md:p-0">
             {sec.name}
           </h1>
-          <ul className="flex gap-6 flex-wrap w-[60vw]  bg-neutral-600/40 p-3 md:p-4 px-9 rounded-md justify-center">
+          <ul className="flex gap-6 flex-wrap lg:flex-nowrap w-[60vw]  bg-neutral-600/40 p-3 md:p-4 px-9 rounded-md justify-center">
             {sec.content.map((item) => (
-              <li key={item.lang} className="w-full">
+              <li key={item.lang} className="lg:w-full ">
                 <SkillComponent {...item} />
               </li>
             ))}
