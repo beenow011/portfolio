@@ -43,6 +43,11 @@ function Projects() {
       github: "https://github.com/beenow011/note-now-firebase/",
     },
   ];
+  // const otherProjects = [
+  //   {
+  //     name:""
+  //   }
+  // ]
   return (
     <div>
       <motion.div
@@ -64,6 +69,11 @@ function Projects() {
             </li>
           ))}
         </ul>
+      </div>
+      <div>
+        <h1 className="text-white font-dm font-bold text-4xl text-center mt-10">
+          Other Projects
+        </h1>
       </div>
     </div>
   );

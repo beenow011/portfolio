@@ -16,11 +16,15 @@ function TopProject({ name, image, techstack, Weblink, github }) {
       </div>
       <div className="ml-10 mt-10 flex flex-col gap-10 justify-center ">
         <h1 className="text-3xl font-bold">{name}</h1>
-        <p className="font-semibold">Tech stack:</p>
-        <div className="ml-10">
-          {techstack.map((tech) => (
-            <h1 key={tech}>{tech}</h1>
-          ))}
+        <div>
+          <p className="font-semibold">Tech stack:</p>
+          <ul className="ml-10 list-disc">
+            {techstack.map((tech) => (
+              <li key={tech}>
+                <h1 className="">{tech}</h1>
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
           <a
