@@ -14,4 +14,8 @@ import ts from "./logos/ts.png"
 import firestore from "./logos/Firestore.png"
 import mySql from "./logos/mysql.png"
 
-export { appwrite, firebase, react, c, cpp, css, tailwind, html, js, python, redux, router, ts, firestore, mySql };
+import beNow from "./project/benowTweets.png"
+import notenow from "./project/notenow.png"
+import portfolio from "./project/portfolio.png"
+
+export { appwrite, firebase, react, c, cpp, css, tailwind, html, js, python, redux, router, ts, firestore, mySql, beNow, portfolio, notenow };
