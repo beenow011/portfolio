@@ -8,6 +8,7 @@ import {
   AboutSite,
   CreativeFrame,
   Home,
+  OtherProjects,
   Projects,
   Skills,
 } from "./components/index.js";
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/aboutsite",
         element: <AboutSite />,
+      },
+      {
+        path: "/projects/:id",
+        element: <OtherProjects />,
       },
     ],
   },

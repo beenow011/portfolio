@@ -17,5 +17,6 @@ import mySql from "./logos/mysql.png"
 import beNow from "./project/benowTweets.png"
 import notenow from "./project/notenow.png"
 import portfolio from "./project/portfolio.png"
+import crypton from "./project/crypton.png"
 
-export { appwrite, firebase, react, c, cpp, css, tailwind, html, js, python, redux, router, ts, firestore, mySql, beNow, portfolio, notenow };
+export { appwrite, firebase, react, c, cpp, css, tailwind, html, js, python, redux, router, ts, firestore, mySql, beNow, portfolio, notenow, crypton };

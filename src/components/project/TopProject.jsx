@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function TopProject({ name, image, techstack, Weblink, github }) {
   const navigate = useNavigate();
@@ -7,10 +8,12 @@ function TopProject({ name, image, techstack, Weblink, github }) {
     <div className="w-[80vw] md:flex   gap-5 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white p-3 rounded-md">
       <div className="flex justify-center items-center ">
         <a href={Weblink}>
-          <img
+          <motion.img
             src={image}
             alt=""
             className="w-[80vw] md:w-[40vw] shadow-lg shadow-white hover:shadow-green-500"
+            whileHover={{ scale: [null, 1.1, 1.1] }}
+            transition={{ duration: 0.2 }}
           />
         </a>
       </div>

@@ -2,8 +2,17 @@ import React from "react";
 import { motion, useScroll } from "framer-motion";
 import "./style.css";
 import { useSelector } from "react-redux";
-import { beNow, portfolio, notenow } from "../../assets";
+import {
+  beNow,
+  portfolio,
+  notenow,
+  crypton,
+  react,
+  js,
+  html,
+} from "../../assets";
 import TopProject from "../project/TopProject";
+import OtherProjectSlide from "../project/OtherProjectSlide";
 function Projects() {
   const { scrollYProgress } = useScroll();
   const theme = useSelector((state) => state.theme);
@@ -21,6 +30,19 @@ function Projects() {
       ],
       Weblink: "https://be-now-tweets.vercel.app/",
       github: "https://github.com/beenow011/BeNow-tweets",
+    },
+    {
+      name: "Crypton-All about Crypto currency",
+      image: crypton,
+      techstack: [
+        "React",
+        "Redux Toolkit",
+        "Rapid API",
+        "ANT Design UI",
+        "Tailwind CSS",
+      ],
+      Weblink: "https://crypton-swart.vercel.app/",
+      github: "https://github.com/beenow011/Crypton",
     },
     {
       name: "Personal Portfolio",
@@ -43,11 +65,23 @@ function Projects() {
       github: "https://github.com/beenow011/note-now-firebase/",
     },
   ];
-  // const otherProjects = [
-  //   {
-  //     name:""
-  //   }
-  // ]
+  const otherProjects = [
+    {
+      name: "React",
+      icon: react,
+      path: "/projects/react",
+    },
+    {
+      name: "Java Script",
+      icon: js,
+      path: "/projects/js",
+    },
+    {
+      name: "HTML CSS",
+      icon: html,
+      path: "/projects/html",
+    },
+  ];
   return (
     <div>
       <motion.div
@@ -74,6 +108,14 @@ function Projects() {
         <h1 className="text-white font-dm font-bold text-4xl text-center mt-10">
           Other Projects
         </h1>
+
+        <ul className="flex flex-col md:flex-row mt-10 justify-center items-center gap-10 mb-10 ">
+          {otherProjects.map((ele) => (
+            <li key={ele.name}>
+              <OtherProjectSlide {...ele} />
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
