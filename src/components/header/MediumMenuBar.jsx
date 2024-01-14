@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navitem from "./Navitem";
 import { motion } from "framer-motion";
 import { ImMenu } from "react-icons/im";
@@ -19,6 +19,23 @@ function MediumMenuBar({ navItems }) {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
   };
+  // const handleCloseMenu = () => {
+  //   setMenu(false);
+  // };
+
+  // useEffect(() => {
+  //   const handleBodyClick = (event) => {
+  //     if (isMenuOpen && !event.target.closest(".menu")) {
+  //       handleCloseMenu();
+  //     }
+  //   };
+
+  //   document.body.addEventListener("click", handleBodyClick);
+
+  //   return () => {
+  //     document.body.removeEventListener("click", handleBodyClick);
+  //   };
+  // }, [menu]);
   return (
     <motion.nav
       initial={false}

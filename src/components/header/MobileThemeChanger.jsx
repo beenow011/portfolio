@@ -25,7 +25,7 @@ function MobileThemeChanger() {
   return (
     <div
       className={`switch relative md:hidden  bg-white  w-24
-       h-[40px] m-10 rounded-md flex ${
+       h-[40px] my-[60px] mx-12 rounded-md flex ${
          isOn ? "justify-end" : "justify-start"
        } p-3`}
       onClick={toggleSwitch}
