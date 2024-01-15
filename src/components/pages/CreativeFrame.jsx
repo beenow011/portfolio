@@ -1,8 +1,11 @@
 import React from "react";
 import { motion, useScroll } from "framer-motion";
 import "./style.css";
+import { useSelector } from "react-redux";
 
 function CreativeFrame() {
+  const theme = useSelector((state) => state.theme);
+
   const { scrollYProgress } = useScroll();
   return (
     <div>

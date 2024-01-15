@@ -6,4 +6,6 @@ import CreativeFrame from "./pages/CreativeFrame"
 import Header from "./header/Header"
 import AboutSite from "./pages/AboutSite"
 import OtherProjects from "./project/OtherProjects"
-export { Home, About, Skills, Projects, CreativeFrame, Header, AboutSite, OtherProjects }
+import Login from "./creative frame/Login"
+import Upload from "./creative frame/Upload"
+export { Home, About, Skills, Projects, CreativeFrame, Header, AboutSite, OtherProjects, Login, Upload }
