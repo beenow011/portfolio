@@ -6,7 +6,7 @@ import authService from "../../Appwrite/appwrite";
 
 function CreativeFrame() {
   const theme = useSelector((state) => state.theme);
-  const [dbItems, setdbItems] = useState({});
+  const [dbItems, setdbItems] = useState([]);
 
   const { scrollYProgress } = useScroll();
   useEffect(() => {
@@ -14,13 +14,13 @@ function CreativeFrame() {
       .getImageId()
       .then((res) => {
         setdbItems(res?.documents);
-        console.log(res);
+        // console.log(res);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
-  console.log(dbItems);
+  // console.log(dbItems);
   return (
     <div>
       <motion.div
@@ -33,9 +33,10 @@ function CreativeFrame() {
       />
       CreativeFrame
       <div className="flex">
-        {dbItems?.map((ele) => (
-          <img src={ele && authService.getFiles(ele.id)} alt="" width={100} />
-        ))}
+        {dbItems &&
+          dbItems.map((ele) => (
+            <img src={ele && authService.getFiles(ele.id)} alt="" width={100} />
+          ))}
       </div>
     </div>
   );
