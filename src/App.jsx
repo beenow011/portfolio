@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 function App() {
   const theme = useSelector((state) => state.theme);
   return (
-    <div className="flex flex-col w-screen">
+    <div className={`flex flex-col w-screen `}>
       <Header />
       <BgEffect />
       <Outlet />

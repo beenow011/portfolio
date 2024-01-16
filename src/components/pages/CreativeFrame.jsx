@@ -52,7 +52,7 @@ function CreativeFrame() {
         }`}
       >
         <img
-          className={`w-64 md:w-96 rounded-md hover:bg-red-300  border-2 ${
+          className={`w-64 md:w-96 rounded-md   border-2 ${
             theme === "dark" ? "border-red-300" : "border-red-800"
           } p-4 `}
           src={

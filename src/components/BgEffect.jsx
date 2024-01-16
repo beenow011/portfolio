@@ -131,7 +131,7 @@ function BgEffect() {
   const [opt, setOpt] = useState(options);
   console.log("opt", opt);
   return (
-    <div className="App">
+    <div className={`App ${theme === "dark" && "bg-black"}`}>
       {init && (
         <Particles
           id="tsparticles"
