@@ -11,6 +11,7 @@ function Upload() {
     try {
       //   console.log(e.target.value);
       const update = await authService.uploadFile(file);
+      console.log(update);
     } catch (err) {
       console.log(err);
     }
