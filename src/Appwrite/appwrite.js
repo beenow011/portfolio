@@ -42,15 +42,33 @@ export class AuthService {
 
     async uploadFile(file) {
         try {
-            return await this.storage.createFile(
+            const res = await this.storage.createFile(
                 conf.appwritePostId,
                 ID.unique(),
                 file
             )
+            console.log(res)
+            if (res) {
+                try {
+                    const promise = await this.databases.createDocument(conf.appwriteDatabaseId, conf.appwriteCollectionId, ID.unique(), { id: res.$id });
+                    return res;
+                } catch (err) {
+                    console.log(err)
+                }
+            }
         } catch (error) {
             console.log(file)
             console.log("Appwrite serive :: uploadFile :: error", error);
             return false
+        }
+    }
+
+    async getImageId() {
+        try {
+            const res = await this.databases.listDocuments(conf.appwriteDatabaseId, conf.appwriteCollectionId)
+            return res;
+        } catch (err) {
+            console.log(err)
         }
     }
 
