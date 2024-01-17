@@ -57,7 +57,11 @@ function Home() {
           </div>
         </div>
       </div>
-      <div>
+      <div
+        onClick={() => {
+          navigate("/aboutsite");
+        }}
+      >
         <motion.div
           className={`w-40 h-40 md:w-64 md:h-64 mx-auto my-96 relative flex justify-center items-center z-[-1] ${
             theme === "dark" ? " bg-cyan-500" : "bg-slate-800"
@@ -73,9 +77,6 @@ function Home() {
             times: [0, 0.2, 0.5, 0.8, 1],
             repeat: Infinity,
             repeatDelay: 1,
-          }}
-          onClick={() => {
-            navigate("/aboutsite");
           }}
         >
           {" "}

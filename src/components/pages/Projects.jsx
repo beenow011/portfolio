@@ -48,7 +48,13 @@ function Projects() {
     {
       name: "Personal Portfolio",
       image: portfolio,
-      techstack: ["React", "Framer Motion", "Tailwind CSS", "Particle JS"],
+      techstack: [
+        "React",
+        "Framer Motion",
+        "Tailwind CSS",
+        "Particle JS",
+        "Appwrite",
+      ],
       Weblink: "https://portfolio-abhinav-vert.vercel.app/",
       github: "https://github.com/beenow011/portfolio",
     },
