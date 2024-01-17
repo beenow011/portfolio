@@ -2,7 +2,10 @@
     "routes": [
       { "src": "/", "dest": "/" },
       { "src": "/about", "dest": "/" },
-      { "src": "/skills", "dest": "/" }
+      { "src": "/skills", "dest": "/" },
+      { "src": "/projects", "dest": "/" },
+      { "src": "/creativeframe", "dest": "/" },
+      { "src": "/aboutsite", "dest": "/" }
      
     ]
   }
