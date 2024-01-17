@@ -35,7 +35,7 @@ function MouseEffect() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log(screenWidth);
+  // console.log(screenWidth);
   useEffect(() => {
     if (mouse.x > themeBoundary) {
       dispatch(changeTheme("light"));

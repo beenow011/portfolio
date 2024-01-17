@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import authService from "../../Appwrite/appwrite";
 function BgPhotos({ dbItems, className }) {
-  console.log("dbItems", dbItems);
+  //   console.log("dbItems", dbItems);
   return (
     <div
       className={`flex blur-sm  overflow-hidden  hover:blur-0 transition  gap-10 justify-center items-center ${className}`}

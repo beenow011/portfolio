@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Blocks } from "react-loader-spinner";
 import { useSelector } from "react-redux";
 import "./style.css";
 import { motion } from "framer-motion";
 function SkillComponent({ lang, icon }) {
   const theme = useSelector((state) => state.theme);
+
   return (
     <motion.div
       className={`flex md:flex-col justify-center items-center w-64 md:w-full rounded-md ${
@@ -22,7 +24,7 @@ function SkillComponent({ lang, icon }) {
         alt={lang}
         width={100}
         height={100}
-        className="w-12 md:w-[100px]"
+        className="w-12 md:w-[100px] loading-image animate-pulse"
       />
     </motion.div>
   );

@@ -1,6 +1,9 @@
 import { useScroll, motion } from "framer-motion";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { Audio } from "react-loader-spinner";
+import { Blocks } from "react-loader-spinner";
+
 import {
   appwrite,
   firebase,
@@ -23,6 +26,7 @@ import Explore from "../Explore.jsx";
 function Skills() {
   const { scrollYProgress } = useScroll();
   const theme = useSelector((state) => state.theme);
+
   const section = [
     {
       name: "Programming Language",
@@ -137,18 +141,19 @@ function Skills() {
         Technical Proficiency
       </h1>
 
-      {section.map((sec) => (
+      {section.map((sec, i) => (
         <motion.div
           className={`flex flex-col justify-center items-center mt-9 md:border border-white w-fit p-3 md:bg-black rounded-lg `}
           animate={{ y: 50 }}
           transition={{ ease: "easeOut", duration: 1 }}
+          key={i}
         >
           <h1 className="text-white text-2xl text-wrap font-semibold font-bungee mb-3 bg-black p-3 md:p-0">
             {sec.name}
           </h1>
           <ul className="flex gap-6 flex-wrap lg:flex-nowrap w-[80vw] md:w-[60vw] bg-neutral-600/40 p-3 md:p-4 px-9 rounded-md justify-center">
             {sec.content.map((item) => (
-              <li key={item.lang} className="lg:w-full ">
+              <li key={item.lang} className="lg:w-full loading-image">
                 <SkillComponent {...item} />
               </li>
             ))}

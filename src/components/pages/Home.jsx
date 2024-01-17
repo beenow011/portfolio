@@ -15,7 +15,7 @@ function Home() {
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
   const theme = useSelector((state) => state.theme);
-  console.log(theme);
+  // console.log(theme);
   return (
     <div className="  bg-no-repeat bg-contain">
       <motion.div

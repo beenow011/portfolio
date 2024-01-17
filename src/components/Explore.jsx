@@ -27,7 +27,7 @@ function Explore() {
       path: "/creativeframe",
     },
   ];
-  console.log(pathname);
+  // console.log(pathname);
   return (
     <div className="flex flex-col justify-center items-center ">
       <h1 className="text-white font-bold text-3xl">Explore other sections</h1>

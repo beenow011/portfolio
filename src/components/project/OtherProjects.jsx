@@ -14,7 +14,7 @@ function OtherProjects() {
       setProj([]);
     }
   }, [name]);
-  console.log(proj);
+  // console.log(proj);
   return (
     <div className="h-screen">
       <h1 className="text-white text-3xl font-semibold text-center">

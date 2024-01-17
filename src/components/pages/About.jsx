@@ -33,8 +33,7 @@ function About() {
             <img
               src={hero}
               width={300}
-              alt=""
-              srcset=""
+              alt="abhinav"
               className="rounded-full  ring hover:ring-white "
             />
           </motion.div>

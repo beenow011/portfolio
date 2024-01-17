@@ -33,7 +33,7 @@ function CreativeFrame() {
   const randomImg = () => {
     setRandomIndex(Math.floor(Math.random() * dbItems.length));
   };
-  console.log(selected, selectedId);
+  // console.log(selected, selectedId);
   return (
     <div>
       <motion.div

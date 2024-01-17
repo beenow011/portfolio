@@ -21,7 +21,7 @@ function MobileThemeChanger() {
     damping: 30,
   };
 
-  console.log(isOn);
+  // console.log(isOn);
   return (
     <div
       className={`switch relative md:hidden  bg-white  w-24

@@ -13,8 +13,8 @@ function BgEffect() {
   const themeBool = useMemo(() => {
     return theme === "light";
   }, [theme]);
-  console.log("theme", themeBool);
-  console.log("in", theme);
+  // console.log("theme", themeBool);
+  // console.log("in", theme);
   //   const { x, y } = mousePointer();
   useEffect(() => {
     // console.log("useEffect triggered with x:", x, "and y:", y);
