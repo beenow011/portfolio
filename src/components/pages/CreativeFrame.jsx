@@ -53,7 +53,7 @@ function CreativeFrame() {
       </h1>
 
       <div
-        className={`relative ${
+        className={`relative overflow-hidden ${
           theme === "dark" ? "bg-slate-700/40" : "bg-slate-200/30 "
         } p-10  `}
       >
