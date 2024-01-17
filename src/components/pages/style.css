@@ -15,3 +15,28 @@
     height: 10px;
   transform-origin: 0%;
   }
+  .img {
+   margin-right: 100px;
+    animation: leftToRight 20s linear infinite; 
+  }
+  @keyframes leftToRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .img2 {
+    margin-right: 100px;
+     animation: rightToLeft 20s  ease-in-out infinite; 
+   }
+   @keyframes rightToLeft {
+     0% {
+       transform: translateX(100%);
+     }
+     100% {
+       transform: translateX(-100%);
+     }
+    } 

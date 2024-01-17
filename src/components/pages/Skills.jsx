@@ -19,6 +19,7 @@ import {
   mySql,
 } from "../../assets/index.js";
 import SkillComponent from "../skills/SkillComponent.jsx";
+import Explore from "../Explore.jsx";
 function Skills() {
   const { scrollYProgress } = useScroll();
   const theme = useSelector((state) => state.theme);
@@ -154,6 +155,9 @@ function Skills() {
           </ul>
         </motion.div>
       ))}
+      <div className="mt-[250px]">
+        <Explore />
+      </div>
     </motion.div>
   );
 }

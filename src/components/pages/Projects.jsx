@@ -13,6 +13,7 @@ import {
 } from "../../assets";
 import TopProject from "../project/TopProject";
 import OtherProjectSlide from "../project/OtherProjectSlide";
+import Explore from "../Explore";
 function Projects() {
   const { scrollYProgress } = useScroll();
   const theme = useSelector((state) => state.theme);
@@ -117,6 +118,7 @@ function Projects() {
           ))}
         </ul>
       </div>
+      <Explore />
     </div>
   );
 }

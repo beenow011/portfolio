@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import AboutMe from "./AboutMe";
 import Education from "./Education";
+import Contact from "./Contact";
 function AboutInfo() {
   const [selectedTab, setSelectedTab] = useState(0);
   const theme = useSelector((state) => state.theme);
@@ -41,6 +42,17 @@ function AboutInfo() {
               <motion.div className="underline" layoutId="underline" />
             ) : null}
           </li>
+          <li
+            className={`flex-1 cursor-pointer p-3 text-center ${
+              selectedTab === 2 ? " bg-neutral-200/80 " : ""
+            }`}
+            onClick={() => setSelectedTab(2)}
+          >
+            Contact
+            {2 === selectedTab ? (
+              <motion.div className="underline" layoutId="underline" />
+            ) : null}
+          </li>
         </ul>
       </nav>
       <main>
@@ -52,7 +64,13 @@ function AboutInfo() {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {selectedTab === 0 ? <AboutMe /> : <Education />}
+            {selectedTab === 0 ? (
+              <AboutMe />
+            ) : selectedTab === 1 ? (
+              <Education />
+            ) : (
+              <Contact />
+            )}
           </motion.div>
         </AnimatePresence>
       </main>
