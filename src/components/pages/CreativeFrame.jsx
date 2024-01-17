@@ -9,6 +9,7 @@ import BgPhotos from "../creative frame/BgPhotos";
 function CreativeFrame() {
   const theme = useSelector((state) => state.theme);
   const [dbItems, setdbItems] = useState([]);
+  // const [dbItems2, setdbItems2] = useState([]);
   const [selected, setSelected] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
   const [randomIndex, setRandomIndex] = useState(
@@ -20,19 +21,21 @@ function CreativeFrame() {
   };
   const { scrollYProgress } = useScroll();
   useEffect(() => {
-    authService
-      .getImageId()
-      .then((res) => {
-        setdbItems(res?.documents);
-        // console.log(res);
+    // setdbItems([]);
+    Promise.all([authService.getImageId(26, 25), authService.getImageId(0, 25)])
+      .then(([res1, res2]) => {
+        // Combine the documents from both responses
+        const combinedDocuments = [...res1?.documents, ...res2?.documents];
+        setdbItems(combinedDocuments);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   }, []);
   const randomImg = () => {
     setRandomIndex(Math.floor(Math.random() * dbItems.length));
   };
+
   // console.log(selected, selectedId);
   return (
     <div>

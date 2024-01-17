@@ -1,5 +1,5 @@
 import conf from './conf.js';
-import { Client, Account, ID, Databases, Storage } from "appwrite";
+import { Client, Account, ID, Databases, Storage, Query } from "appwrite";
 // import * as appwrite from 'node-appwrite';
 
 export class AuthService {
@@ -63,9 +63,14 @@ export class AuthService {
         }
     }
 
-    async getImageId() {
+    async getImageId(offset, limit) {
+
+
         try {
-            const res = await this.databases.listDocuments(conf.appwriteDatabaseId, conf.appwriteCollectionId)
+            const res = await this.databases.listDocuments(conf.appwriteDatabaseId, conf.appwriteCollectionId, [
+                Query.limit(limit),
+                Query.offset(offset)
+            ])
             return res;
         } catch (err) {
             console.log(err)
