@@ -18,7 +18,7 @@ export function mousePointer() {
             document.removeEventListener("mousemove", handleMouseMove);
         };
     }, []);
-    //   console.log(position);
+    // console.log(position);
     return position;
 }
 
