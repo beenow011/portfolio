@@ -32,7 +32,7 @@ function Header() {
   ];
   const theme = useSelector((state) => state.theme);
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between relative">
       <div
         className={`hidden md:block  text-black font-tektur md:w-36 lg:text-3xl  lg:w-72 lg:p-4 md:p-2 h-fit lg:h-24 m-10 bg-white rounded-md ${
           theme === "dark" && "opacity-0"

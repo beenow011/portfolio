@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import hero from "../../assets/hero.png";
 import hero2 from "../../assets/abhi2.png";
-import hero3 from "../../assets/abhi3.png";
+import hero3 from "../../assets/abhi4.png";
 import hero4 from "../../assets/abhi5.png";
 import { useSelector } from "react-redux";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
@@ -52,7 +52,6 @@ function Home() {
             <img
               src={hero4}
               alt=""
-              srcset=""
               className="z-[-1] w-[450px] md:w-[600px]  mx-auto mask1 hover:grayscale-0 md:grayscale  shadow-orange-500"
             />
           </div>
@@ -60,7 +59,7 @@ function Home() {
       </div>
       <div>
         <motion.div
-          className={`w-40 h-40 md:w-64 md:h-64 mx-auto my-96 relative flex justify-center items-center ${
+          className={`w-40 h-40 md:w-64 md:h-64 mx-auto my-96 relative flex justify-center items-center z-[-1] ${
             theme === "dark" ? " bg-cyan-500" : "bg-slate-800"
           } `}
           animate={{

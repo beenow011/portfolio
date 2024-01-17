@@ -3,6 +3,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { AiOutlineGithub, AiOutlineInstagram } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { FiPhoneCall } from "react-icons/fi";
+import resume from "../../assets/abhinavResume.pdf";
+
 function Contact() {
   const demo = {
     img: <FaLinkedin />,
@@ -41,6 +43,14 @@ function Contact() {
           <a href="https://www.instagram.com/abhinav_nb/">abhinav_nb</a>
         </p>
       </div>
+
+      <a
+        href={resume}
+        download="ResumeAbhinav.pdf"
+        className=" bg-blue-400 p-2 rounded-md"
+      >
+        Resume
+      </a>
     </div>
   );
 }

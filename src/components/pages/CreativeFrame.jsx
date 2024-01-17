@@ -4,6 +4,7 @@ import "./style.css";
 import { useSelector } from "react-redux";
 import authService from "../../Appwrite/appwrite";
 import Explore from "../Explore";
+import BgPhotos from "../creative frame/BgPhotos";
 
 function CreativeFrame() {
   const theme = useSelector((state) => state.theme);
@@ -36,7 +37,7 @@ function CreativeFrame() {
   return (
     <div>
       <motion.div
-        className={`progress-bar z-50 ${
+        className={`progress-bar z-50  ${
           theme === "dark"
             ? "bg-gradient-to-r from-red-800 via-yellow-600 to-yellow-500"
             : "bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600"
@@ -50,32 +51,36 @@ function CreativeFrame() {
       >
         Creative Frame
       </h1>
-      <div className="flex flex-col justify-center items-center gap-y-5">
-        <p className="font-dm text-white font-bold text-3xl text-center">
-          Check out my Instagram for more photographs and reels
-        </p>
-        <a
-          href="https://www.instagram.com/abhinav_nb/"
-          className="p-3 bg-slate-700 rounded-md text-white hover:bg-black"
-        >
-          abhinav_nb
-        </a>
-      </div>
-      <div className="flex blur-sm  overflow-hidden img  gap-10 justify-center items-center">
-        {dbItems &&
-          dbItems.map((ele, i) => (
-            <div key={i} className="">
-              <img
-                src={ele && authService.getFiles(ele.id)}
-                alt=""
-                className="w-64 md:w-96"
-              />
-            </div>
-          ))}
+
+      <div
+        className={`relative ${
+          theme === "dark" ? "bg-slate-700/40" : "bg-slate-200/30 "
+        } p-10  `}
+      >
+        <BgPhotos dbItems={dbItems && [...dbItems]} className="img" />
+        <BgPhotos dbItems={dbItems && [...dbItems]} className="img3" />
+        <BgPhotos dbItems={dbItems && [...dbItems]} className="img4" />
+        <BgPhotos dbItems={dbItems && [...dbItems]} className="img2" />
+
+        <div className="flex xl:absolute flex-col justify-center items-center gap-y-5 top-[30%] left-[30%]">
+          <p
+            className={`font-dm  font-bold text-3xl text-center ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
+          >
+            Check out my Instagram for more photographs and reels
+          </p>
+          <a
+            href="https://www.instagram.com/abhinav_nb/"
+            className="p-3 bg-slate-700 rounded-md text-white hover:bg-black"
+          >
+            abhinav_nb
+          </a>
+        </div>
       </div>
       <div
         onClick={randomImg}
-        className={`flex justify-center items-center relative md:bg-gradient-t mb-10 mt-10 ${
+        className={`flex justify-center items-center relative  md:bg-gradient-t mb-10 mt-24 ${
           theme === "dark"
             ? "from-gray-500 to-white"
             : "from-slate-900 to-slate-300"
@@ -97,18 +102,6 @@ function CreativeFrame() {
           Click here
         </div>
       </div>
-      <div className="flex blur-sm img2 overflow-hidden gap-10 justify-center items-center mb-10">
-        {dbItems &&
-          dbItems.map((ele, i) => (
-            <div key={i}>
-              <img
-                src={ele && authService.getFiles(ele.id)}
-                alt=""
-                className="w-10 md:w-96"
-              />
-            </div>
-          ))}
-      </div>
       <div
         className={`flex relative flex-wrap overflow-hidden gap-10 justify-center items-center `}
       >
@@ -127,7 +120,9 @@ function CreativeFrame() {
                 className={`w-32 md:w-96 rounded-md shadow-md ${
                   theme === "dark" ? "shadow-slate-400" : "shadow-black"
                 } ${
-                  selectedId === ele?.id ? "transform scale-150 transition" : ""
+                  selectedId === ele?.id
+                    ? "transform scale-150 transition-transform"
+                    : ""
                 }`}
                 onClick={() => setSelectedId(ele?.id)}
               />
