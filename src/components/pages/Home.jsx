@@ -19,7 +19,7 @@ function Home() {
   return (
     <div className="  bg-no-repeat bg-contain">
       <motion.div
-        className={`progress-bar ${
+        className={`progress-bar z-30 ${
           theme === "dark"
             ? "bg-gradient-to-r from-red-800 via-yellow-600 to-yellow-500"
             : "bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600"
@@ -52,7 +52,7 @@ function Home() {
             <img
               src={hero4}
               alt=""
-              className="z-[-1] w-[450px] md:w-[600px]  mx-auto mask1 hover:grayscale-0 md:grayscale  shadow-orange-500"
+              className="z-[10] w-[450px] md:w-[600px]  mx-auto mask1 hover:grayscale-0 md:grayscale  shadow-orange-500"
             />
           </div>
         </div>
