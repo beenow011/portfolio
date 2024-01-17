@@ -60,10 +60,10 @@ function CreativeFrame() {
           theme === "dark" ? "bg-slate-700/40" : "bg-slate-200/30 "
         } p-10  `}
       >
-        <BgPhotos dbItems={dbItems && [...dbItems]} className="img" />
-        <BgPhotos dbItems={dbItems && [...dbItems]} className="img3" />
-        <BgPhotos dbItems={dbItems && [...dbItems]} className="img4" />
-        <BgPhotos dbItems={dbItems && [...dbItems]} className="img2" />
+        <BgPhotos dbItems={dbItems && dbItems.slice(0, 25)} className="img" />
+        <BgPhotos dbItems={dbItems && dbItems.slice(10, 35)} className="img3" />
+        <BgPhotos dbItems={dbItems && dbItems.slice(25, 50)} className="img4" />
+        <BgPhotos dbItems={dbItems && dbItems.slice(0, 25)} className="img2" />
 
         <div className="flex xl:absolute flex-col justify-center items-center gap-y-5 top-[30%] left-[30%]">
           <p
