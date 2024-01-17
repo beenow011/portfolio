@@ -20,7 +20,7 @@ function AboutInfo() {
       <nav>
         <ul className="flex font-dm font-semibold">
           <li
-            className={`flex-1 cursor-pointer p-3 text-center ${
+            className={`flex-1 cursor-pointer p-3 text-center border hover:bg-slate-600 rounded-md ${
               selectedTab === 0 ? " bg-neutral-200/80 " : ""
             }`}
             onClick={() => setSelectedTab(0)}
@@ -32,7 +32,7 @@ function AboutInfo() {
           </li>
 
           <li
-            className={`flex-1 cursor-pointer p-3 text-center ${
+            className={`flex-1 cursor-pointer p-3 text-center border hover:bg-slate-600 rounded-md ${
               selectedTab === 1 ? " bg-neutral-200/80 " : ""
             }`}
             onClick={() => setSelectedTab(1)}
@@ -43,7 +43,7 @@ function AboutInfo() {
             ) : null}
           </li>
           <li
-            className={`flex-1 cursor-pointer p-3 text-center ${
+            className={`flex-1 cursor-pointer p-3 text-center border hover:bg-slate-600 rounded-md ${
               selectedTab === 2 ? " bg-neutral-200/80 " : ""
             }`}
             onClick={() => setSelectedTab(2)}

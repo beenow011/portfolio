@@ -5,6 +5,7 @@ import "./style.css";
 import { useSelector } from "react-redux";
 import AboutInfo from "../about/AboutInfo";
 import Explore from "../Explore";
+import resume from "../../assets/abhinavResume.pdf";
 function About() {
   const { scrollYProgress } = useScroll();
   const theme = useSelector((state) => state.theme);
@@ -56,6 +57,15 @@ function About() {
             </div>
           </motion.div>
           <AboutInfo />
+          <motion.a
+            animate={{ y: 50 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+            href={resume}
+            download="ResumeAbhinav.pdf"
+            className="mb-96"
+          >
+            Resume
+          </motion.a>
         </motion.div>
       </motion.div>
       <Explore />

@@ -25,7 +25,7 @@ function MouseEffect() {
       if (window.innerWidth > 1200) {
         setThemeBoundary(850);
       } else {
-        setThemeBoundary(450);
+        setThemeBoundary(400);
       }
     };
 
@@ -60,9 +60,9 @@ function MouseEffect() {
         dragElastic={0.5}
         dragConstraints={{
           left: 0,
-          right: window.innerWidth - 100,
+          right: window.innerWidth - 200,
           top: 0,
-          bottom: 100,
+          bottom: 10,
         }}
         // animate={mouse}
         transition={{

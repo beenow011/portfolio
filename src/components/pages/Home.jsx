@@ -31,15 +31,17 @@ function Home() {
           <h1
             className={` font-bold text-center text-5xl md:text-9xl  text-white ${
               theme === "dark"
-                ? "font-nab  lg:pl-96 "
-                : "font-dm text-tektur-400 font-semibold  lg:pl-96 "
+                ? "font-nab  lg:pl-48 xl:pl-[500px] "
+                : "font-dm text-tektur-400 font-bold lg:pl-48 xl:pl-[500px] "
             }  `}
           >
             Abhinav N B
           </h1>
           <p
-            className={` text-white text-center lg:pl-96 l  mt-10 ${
-              theme === "dark" ? "font-bungee text-3xl" : "font-dm text-5xl"
+            className={` text-white text-center  l  mt-10 ${
+              theme === "dark"
+                ? "font-bungee text-3xl lg:pl-48 xl:pl-96"
+                : "font-dm text-5xl lg:pl-48 xl:pl-[500px]"
             }`}
           >
             Web Developer | Video Editor

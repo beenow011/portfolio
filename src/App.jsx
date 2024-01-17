@@ -5,6 +5,7 @@ import BgEffect from "./components/BgEffect";
 import { motion, useScroll } from "framer-motion";
 import "./App.css";
 import { useSelector } from "react-redux";
+import Footer from "./components/footer/Footer";
 function App() {
   const theme = useSelector((state) => state.theme);
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <BgEffect />
       <Outlet />
+      <Footer />
     </div>
   );
 }

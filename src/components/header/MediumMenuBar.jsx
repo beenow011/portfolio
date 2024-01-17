@@ -40,7 +40,7 @@ function MediumMenuBar({ navItems }) {
     <motion.nav
       initial={false}
       animate={menu ? "open" : "closed"}
-      className="menu lg:hidden  flex flex-col justify-center items-center   rounded-full px-1 m-10 p-5 w-fit"
+      className="menu lg:hidden  flex flex-col justify-center items-center   rounded-full px-1 m-10 p-5 w-fit relative"
     >
       <motion.button
         whileTap={{ scale: 0.97 }}
@@ -69,7 +69,7 @@ function MediumMenuBar({ navItems }) {
         ></motion.div>
       </motion.button>
       <motion.ul
-        className="flex z-20 flex-col fixed top-36 md:static md:flex-row header p-3 gap-3"
+        className="flex z-20 flex-col absolute top-24 md:static md:flex-row header p-3 gap-3"
         variants={{
           open: {
             clipPath: "inset(0% 0% 0% 0% round 10px)",
@@ -97,6 +97,7 @@ function MediumMenuBar({ navItems }) {
             variants={itemVariants}
             key={item.name}
             className="my-auto"
+            onClick={() => setMenu(false)}
           >
             <Navitem {...item} />
           </motion.li>

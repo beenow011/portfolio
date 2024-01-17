@@ -9,7 +9,7 @@ function Navitem({ name, path }) {
   return (
     <NavLink to={path}>
       <div
-        className={`border  rounded-lg p-1 md:p-2 lg:p-3 hover:bg-orange-600 ${
+        className={`border  rounded-lg p-1 md:p-2 lg:p-2 xl:p-3 hover:bg-orange-600 ${
           pathname === path && "bg-orange-400"
         }`}
       >
