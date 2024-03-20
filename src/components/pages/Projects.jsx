@@ -10,6 +10,7 @@ import {
   react,
   js,
   html,
+  yt,
 } from "../../assets";
 import TopProject from "../project/TopProject";
 import OtherProjectSlide from "../project/OtherProjectSlide";
@@ -18,6 +19,21 @@ function Projects() {
   const { scrollYProgress } = useScroll();
   const theme = useSelector((state) => state.theme);
   const topProjects = [
+    {
+      name: "PlayNow Video sharing webapp",
+      image: yt,
+      techstack: [
+        "React",
+        "Redux Toolkit",
+        "Express.js",
+        "Node.js",
+        "MongoDB",
+        "Cloudinary",
+        "Tailwind CSS",
+      ],
+      Weblink: "https://www.playitnow.co/",
+      github: "https://github.com/beenow011/PlayNow-mern",
+    },
     {
       name: "BeNow Tweets",
       image: beNow,
