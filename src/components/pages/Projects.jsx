@@ -11,6 +11,8 @@ import {
   js,
   html,
   yt,
+  cinex,
+  quill,
 } from "../../assets";
 import TopProject from "../project/TopProject";
 import OtherProjectSlide from "../project/OtherProjectSlide";
@@ -19,6 +21,39 @@ function Projects() {
   const { scrollYProgress } = useScroll();
   const theme = useSelector((state) => state.theme);
   const topProjects = [
+    {
+      name: "Quill - PDF Questioning Platform",
+      image: quill,
+      techstack: [
+        "Next.js (TS)",
+        "OpenAI",
+        "Kinde",
+        "tRPC",
+        "Zod",
+        "shadcn-ui",
+        "LangChain",
+        "Pinecone",
+        "Prisma ORM",
+        "Stripe",
+      ],
+      Weblink: "https://quill-azure.vercel.app/",
+      github: "https://github.com/beenow011/Quill",
+    },
+    {
+      name: "CineVerse - Personalized Cine Expedition",
+      image: cinex,
+      techstack: [
+        "Next.js",
+        "TypeScript",
+        "Clerk",
+        "Firestore",
+        "OpenAI API",
+        "Shad CN UI",
+        "Accenturycity",
+      ],
+      Weblink: "https://cine-x.vercel.app/",
+      github: "https://github.com/beenow011/cineX",
+    },
     {
       name: "PlayNow Video sharing webapp",
       image: yt,
@@ -88,6 +123,7 @@ function Projects() {
       github: "https://github.com/beenow011/note-now-firebase/",
     },
   ];
+
   const otherProjects = [
     {
       name: "React",

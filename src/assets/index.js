@@ -19,4 +19,6 @@ import notenow from "./project/notenow.png"
 import portfolio from "./project/portfolio.png"
 import crypton from "./project/crypton.png"
 import yt from "./project/youtube.png"
-export { appwrite, firebase, react, c, cpp, css, tailwind, html, js, python, redux, router, ts, firestore, mySql, beNow, portfolio, notenow, crypton, yt };
+import quill from './project/quill.png'
+import cinex from './project/cinex.png'
+export { appwrite, quill, cinex, firebase, react, c, cpp, css, tailwind, html, js, python, redux, router, ts, firestore, mySql, beNow, portfolio, notenow, crypton, yt };
